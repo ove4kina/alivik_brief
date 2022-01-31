@@ -1,0 +1,29 @@
+.card-visual{
+	cursor: pointer;
+	transition: 0.3s ease;
+	transition-property: outline-color;
+	&__name{
+		transition:color 0.3s ease;
+	}
+	&.active{
+		outline-color: $red!important;
+		outline-width: 2px;
+		outline-offset: -1px;
+		.card-visual{
+			&__name{
+				color: $black;
+			}
+		}
+	}
+	@media (min-width: $desktop){
+
+		&:hover{
+			outline-color: $gray8;
+			.card-visual{
+				&__name{
+					color: $black;
+				}
+			}
+		}
+	}
+}

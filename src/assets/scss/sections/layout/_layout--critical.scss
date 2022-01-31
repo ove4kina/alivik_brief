@@ -1,0 +1,112 @@
+.layout{
+    min-height: calc(100vh - 15.1666667rem);
+    box-sizing: border-box;
+    padding-top: toRem(96);
+    @media (max-width: $mobileMax){
+        display: none;
+    }
+    &__title{
+        margin-bottom: toRem(12);
+    }
+    &__tabs {
+        margin-bottom: toRem(32);
+        max-width: toRem(600);
+    }
+    &__step{
+        display: none;
+        max-width: toRem(600);
+        width: 100%;
+        &.active{
+            display: block;
+        }
+    }
+    &__navigation{
+        border-top: 1px solid $gray1;
+        padding: toRem(12) 3.125% toRem(16);
+        box-sizing: border-box;
+        background-color: #fff;
+        @media (max-width: $tabletMax) {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            background-color: #fff;
+        }
+        &.hide{
+            display: none;
+        }
+        
+    }
+    &__button{
+        display: inline-block;
+        vertical-align: middle;
+        &.hide{
+            opacity: 0;
+            pointer-events: none;
+        }
+        @media (max-width: $tabletMax){
+            &--add{
+                display: none;
+            }
+        }
+    }
+    &__total{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 toRem(65);
+        text-align: center;
+        p{
+            font-family: bold;
+            color: $black;
+            font-size: toRem(14);
+            line-height: toRem(24);
+        }
+        span{
+            font-size: toRem(14);
+            line-height: toRem(24);
+            color: rgba($black,0.12);
+            margin-bottom: toRem(-3);
+        }
+    }
+    &__invoice{
+        @media (max-width: $tabletMax){
+            display: none;
+        }
+    }
+    @media (min-width: $tabletDefault){
+        &__navigation{
+            padding: toRem(12) 10.9375% toRem(16);
+        }
+    }
+    @media (min-width: $desktop){
+        min-height: calc(100vh - 6.5rem);
+        &__navigation{
+            padding: toRem(16) 0 0;
+            max-width: toRem(600);
+            text-align: right;
+            margin-top: toRem(32);
+        }
+        &__button{
+            &--prev{
+                float: left;
+            }
+            &--add{
+                float: left;
+                margin-left: toRem(12);
+            }
+        }
+        &__container{
+            position: relative;
+        }
+        &__invoice{
+            position: fixed!important;
+            top: toRem(96);
+            right: 10.9375%;
+            opacity: 0;
+            pointer-events: none;
+            transform: translate(0,10px);
+        }
+    }
+}
+

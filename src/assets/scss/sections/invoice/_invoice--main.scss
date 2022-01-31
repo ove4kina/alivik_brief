@@ -1,0 +1,7 @@
+.invoice{
+    &__total{
+        &::before{
+            transition: opacity 0.3s ease;
+        }
+    }
+}

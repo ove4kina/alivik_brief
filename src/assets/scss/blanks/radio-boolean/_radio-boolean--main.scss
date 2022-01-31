@@ -1,0 +1,14 @@
+.radio-boolean{
+	&__value{
+		&.active{
+			z-index: 3!important;
+		}
+	}
+	@media (min-width: $desktop){
+		&__value{
+			&:hover{
+				z-index: 2;
+			}
+		}
+	}
+}

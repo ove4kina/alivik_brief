@@ -1,0 +1,42 @@
+.textarea{
+    textarea{
+        min-height: toRem(140);
+        border: 1px solid $gray3;
+        font-size: toRem(14);
+        line-height: toRem(20);
+        color: $black;
+        padding: toRem(20) 0 toRem(20) toRem(16);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        font-family: reg;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: transparent;
+        resize: none;
+
+        &::-webkit-input-placeholder {
+            font-size: inherit;
+            font-family: inherit;
+            color: $gray4;
+        }
+        &::-moz-placeholder {
+            font-size: inherit;
+            font-family: inherit;
+            color: $gray4;
+        }
+    
+        &:-moz-placeholder {
+            font-size: inherit;
+            font-family: inherit;
+            color: $gray4;
+        }
+    
+        &:-ms-input-placeholder {
+            font-size: inherit;
+            font-family: inherit;
+            color: $gray4;
+        }
+    }
+}

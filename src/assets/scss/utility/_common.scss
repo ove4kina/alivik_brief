@@ -1,0 +1,122 @@
+.container{
+    box-sizing: border-box;
+    padding: 0 6.25%;
+    max-width: 1720px;
+    margin: 0 auto;
+    @media (min-width: $tablet) {
+        padding: 0 3.125%;
+    }
+    @media (min-width: $tabletDefault){
+        padding: 0 10.9375%;
+    }
+    @media (min-width: $containerCollapse) {
+        padding: 0;
+    }
+}
+
+
+
+body {
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    font-family: reg;
+    color: $black;
+    background-color: #fff; //-webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    min-width: 320px;
+}
+html{
+    font-size: 12px;
+    @media(min-width: 1200px){
+        font-size: -webkit-calc((100vw + 1px - 1px)/100);
+        font-size: expression((100vw + 1px - 1px)/100);
+        font-size: -moz-calc((100vw + 1px - 1px)/100);
+        font-size: -o-calc((100vw + 1px - 1px)/100);
+        font-size: calc((100vw + 1px - 1px)/100);
+    }
+    @media(min-width: 1500px){
+        font-size: 15px;
+    }
+}
+
+
+
+.button,button {
+    border: none;
+    cursor: pointer;
+    font-family: 'reg';
+    background: none;
+    padding: 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+.mobile-message{
+    padding-top: toRem(92);
+    min-height: calc(100vh - 3.16666667rem);
+    box-sizing: border-box;
+    p{
+        font-size: toRem(28);
+        line-height: toRem(40);
+        font-family: bold;
+        color: $black;
+        max-width: toRem(400);
+    }
+    @media (min-width: $tablet){
+        display: none;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.move-item {
+    transition: all 0.4s 0.5s;
+}
+
+
+
+
+.move-right-enter,.move-left-leave-to{
+    transform: translateX(-10px);
+}
+.move-right-leave-to,.move-left-enter{
+    transform: translateX(50px);
+    
+}
+
+.move-right-leave-to,.move-left-leave-to{
+    transition-duration: 0.5s;
+    transition-delay: 0s;
+}
+.move-right-enter, .move-right-leave-to,.move-left-enter,.move-left-leave-to
+    /* .list-complete-leave-active до версии 2.1.8 */ {
+    opacity: 0;
+    
+}
+.move-right-leave-active,.move-left-leave-active {
+    position: absolute;
+}
+
+
+
+
+
+
+.v-lazy-image {
+    opacity: 0;
+    transition: 0.5s ease-out;
+    transform: translate(-50%, -50%) scale(1.03);
+    transition-property: opacity,transform;
+    
+}
+.v-lazy-image-loaded {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1)!important;
+}

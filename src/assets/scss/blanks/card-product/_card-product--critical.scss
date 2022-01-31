@@ -1,0 +1,27 @@
+.card-product{
+	outline: 1px solid $gray3;
+	width: toRem(140);
+	&__image{
+		height: toRem(140);
+		position: relative;
+		overflow: hidden;
+		background: url(/public/images/temp/placeholder.svg) no-repeat center center;
+		background-size: 60%;
+		img{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%) scale(1.03);
+			height: toRem(124);
+
+		}
+	}
+	&__name{
+		padding: toRem(12) 0 toRem(16);
+		text-align: center;
+		color: rgba($black,0.7);
+		font-size: toRem(14);
+		line-height: toRem(20);
+		border-top: 1px solid $gray3;
+	}
+}

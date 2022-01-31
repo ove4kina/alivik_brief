@@ -1,0 +1,87 @@
+.upload{
+	&__section{
+		transition: 0.3s ease;
+		transition-property: background-color,outline-color;
+		cursor: pointer;
+		p{
+			transition: color 0.3s ease;
+		}
+		&--checkbox{
+			span{
+				transition: 0.3s ease;
+				transition-property: border-color, background-color;
+			}
+		}
+		&--value{
+			input{
+				cursor: pointer;
+			}
+		}
+	}
+	&__error{
+		transition: opacity 0.3s ease;
+	}
+	&.error{
+		.upload{
+			&__error{
+				opacity: 1;
+			}
+		}
+	}
+	&.active{
+		.upload{
+			&__section{
+				&--checkbox{
+					outline-width: 2px;
+					outline-offset: -1px;
+					outline-color: $red!important;
+					span{
+						background-color: $red;
+						border-color: $red;
+					}
+					p{
+						color: $black;
+					}
+				}
+				&--value{
+					background-color: transparent;
+					pointer-events: all;
+					p{
+						color: rgba(0, 0, 0, 0.7);
+					}
+				}
+			}
+		}
+	}
+	&__loading{
+		transition: opacity 0.3s ease;
+	}
+	&.show-loading{
+		.upload{
+			&__loading{
+				opacity: 1;
+			}
+		}
+	}
+	&.loading{
+		.upload{
+			&__loading{
+				rect{
+					animation: loading 1s linear infinite;
+				}
+			}
+		}
+	}
+	@media (min-width: $desktop){
+		.upload{
+			&__section{
+				&:hover{
+					outline-color: $gray12;
+					p{
+						color: $black;
+					}
+				}
+			}
+		}
+	}
+}

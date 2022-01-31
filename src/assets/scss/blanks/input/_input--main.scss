@@ -1,0 +1,31 @@
+.input{
+    input{
+        transition: 0.3s ease;
+        transition-property: outline-color,background-color,color;
+        &::-webkit-input-placeholder {
+            transition: color 0.3s ease;
+        }
+        &::-moz-placeholder {
+            transition: color 0.3s ease;
+        }
+    
+        &:-moz-placeholder {
+            transition: color 0.3s ease;
+        }
+    
+        &:-ms-input-placeholder {
+            transition: color 0.3s ease;
+        }
+        &:focus{
+            outline-color: $gray12;
+        }
+    }
+    &::before{
+        transition: color 0.3s ease;
+    }
+    &:hover{
+        input{
+            outline-color: $gray12;
+        }
+    }
+}

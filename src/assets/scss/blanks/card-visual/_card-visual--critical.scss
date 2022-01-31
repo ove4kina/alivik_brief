@@ -1,0 +1,32 @@
+.card-visual{
+	width: toRem(180);
+	height: toRem(180);
+	outline: 1px solid $gray3;
+	box-sizing: border-box;
+	position: relative;
+	&__image{
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translate(-50%,0);
+		font-size: 0;
+		img{
+			width: toRem(180);
+		}
+	}
+	&__name{
+		position: absolute;
+		bottom: toRem(16);
+		text-align: center;
+		padding: 0 toRem(16);
+		left: 0;
+		width: 100%;
+		box-sizing: border-box;
+		color: rgba($black,0.7);
+		font-size: toRem(14);
+		line-height: toRem(20);
+		&--big-offset{
+			bottom: toRem(20);
+		}
+	}
+}

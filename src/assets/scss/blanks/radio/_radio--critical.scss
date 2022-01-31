@@ -1,0 +1,15 @@
+.radio{
+    width: toRem(190);
+    height: toRem(60);
+    font-size: toRem(14);
+    line-height: toRem(60);
+    text-align: center;
+    outline: 1px solid $gray3;
+    color: rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+    cursor: pointer;
+    span{
+        font-family: bold;
+        color: rgba(0, 0, 0, 0.7);
+    }
+}

@@ -1,0 +1,19 @@
+.button{
+	&--primary{
+		transition: 0.3s ease;
+		transition-property: opacity,border-color,color,background-color;
+	}
+	@media (min-width: $desktop) {
+		&--red{
+			&:hover{
+				background-color: $redLight;
+				border-color: $redLight;
+			}
+		}
+		&--border-gray{
+			&:hover{
+				border-color: $gray12;
+			}
+		}
+	}
+}

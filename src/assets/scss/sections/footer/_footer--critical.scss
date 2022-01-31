@@ -1,0 +1,26 @@
+.footer{
+    padding-bottom: toRem(24);
+    a{
+        font-size: toRem(10);
+        line-height: toRem(12);
+        color: rgba($black,0.2);
+        & + a{
+            margin-left: toRem(24);
+        }
+    }
+    @media (min-width: $tablet) {
+        padding: toRem(40) 0 toRem(128);
+        text-align: center;
+    }
+    @media (min-width: $desktop) {
+        padding: toRem(24) 0 toRem(40);
+        text-align: left;
+        a{
+            font-size: toRem(10);
+            line-height: toRem(12);
+            & + a{
+                margin-left: toRem(24);
+            }
+        }
+    }
+}

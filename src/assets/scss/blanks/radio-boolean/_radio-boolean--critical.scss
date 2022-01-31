@@ -1,0 +1,12 @@
+.radio-boolean{
+	&__value{
+		display: inline-block;
+		vertical-align: middle;
+		width: toRem(120);
+		position: relative;
+		z-index: 1;
+		& + &{
+			margin-left: 1px;
+		}
+	}
+}

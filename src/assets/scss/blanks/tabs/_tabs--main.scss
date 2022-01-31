@@ -1,0 +1,6 @@
+.tabs{
+    &__bar{
+        transition: 0.3s ease;
+        transition-property: width,left;
+    }
+}

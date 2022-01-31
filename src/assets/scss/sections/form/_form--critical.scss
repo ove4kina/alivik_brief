@@ -1,0 +1,45 @@
+.form{
+    position: relative;
+    &__title{
+        margin-bottom:  toRem(12);
+        max-width: toRem(360);
+    }
+    &__text{
+        max-width: toRem(360);
+        margin-bottom:  toRem(32);
+    }
+    &__input{
+        max-width: toRem(400);
+        & + &{
+            margin-top:  toRem(20);
+        }
+    }
+    &__button{
+        vertical-align: top;
+    }
+    &__buttons{
+        margin-top:  toRem(20);
+        max-width: toRem(400);
+    }
+    &__response{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(-10px,0);
+    }
+    &__preloader{
+        position: absolute;
+        pointer-events: none;
+        opacity: 0;
+    }
+    @media (min-width: $tablet) {
+        &__button{
+            &--send{
+                float: right;
+            }
+        }
+    }
+}

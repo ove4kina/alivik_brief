@@ -1,0 +1,66 @@
+.form{
+    &__preloader{
+        top: 50%;
+        left: toRem(200);
+        transform: translate(-50%,-50%);
+        width: toRem(40);
+        height: toRem(40);
+        border-radius: 50%;
+        border: toRem(4) solid $gray1;
+        border-top-color: $red;
+    }
+    &.send{
+        .form{
+            &__body{
+                opacity: 0;
+                pointer-events: none;
+                transform: scale(0.97) translateX(50px);
+            }
+            &__response{
+                opacity: 1;
+                transform: translate(0,0) scale(1);
+                transition-delay: 0.5s;
+                transition-duration: 0.4s;
+            }
+            &__prealoder{
+                opacity: 0;
+                transition:transform 0.3s ease, opacity 0.1s ease;
+                transform: translate(-50%,-50%) translateX(50px);
+            }
+        }
+    }
+    &.loading{
+        .form{
+            &__preloader{
+                opacity: 1;
+                animation: rotate 1s infinite linear;
+            }
+            &__body{
+                pointer-events: none;
+                opacity: 0.7;
+                transform: scale(0.97);
+            }
+        }
+    }
+    &__body{
+        transition: 0.5s ease;
+        transition-property: opacity,transform,filter;
+    }
+    &__response{
+        transition: 0.4s ease;
+        transition-property: opacity,transform;
+    }
+    &__preloader{
+        transition: 0.3s ease opacity;
+        z-index: 4;
+    }
+}
+
+@keyframes rotate {
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}

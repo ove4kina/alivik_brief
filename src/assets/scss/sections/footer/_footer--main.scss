@@ -1,0 +1,10 @@
+.footer{
+    @media (min-width: $desktop) {
+        a{
+            transition: color 0.3s ease;
+            &:hover{
+                color: rgba($black,0.5)
+            }
+        }
+    }
+}

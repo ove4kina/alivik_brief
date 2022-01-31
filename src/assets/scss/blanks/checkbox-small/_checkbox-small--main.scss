@@ -1,0 +1,54 @@
+.checkbox-small{
+	cursor: pointer;
+	&__value{
+		position: relative;
+		transition: border-color 0.3s ease;
+		&::before{
+			transition: opacity 0.3s ease;
+			content: '\e902';
+			font-family: icon;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: toRem(12);
+			color: $gray7;
+			pointer-events: none;
+			opacity: 0;
+		}
+	}
+	&__price{
+		transition: color 0.3s ease;
+	}
+	&__name{
+		transition: color 0.3s ease;
+	}
+	&.active{
+		.checkbox-small{
+			&__value{
+				&::before{
+					opacity: 1;
+				}
+			}
+			&__name{
+				color: $black;
+			}
+			&__price{
+				color: rgba($black,0.7);
+			}
+			
+		}
+	}
+	@media (min-width: $desktop) {
+		&:hover{
+			.checkbox-small{
+				&__value{
+					border-color: $gray8;
+				}
+				&__name{
+					color: $black;
+				}
+			}
+		}
+	}
+}

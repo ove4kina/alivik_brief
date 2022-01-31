@@ -1,0 +1,34 @@
+.layout{
+	@media (min-width: $desktop) {
+		&__invoice{
+			transition: 0.3s ease-out;
+			transition-property: opacity,transform;
+			&.active{
+				opacity: 1;
+				transform: translate(0,0);
+				pointer-events: all;
+			}
+		}
+	}
+	&__navigation{
+		transition: opacity 0.3s ease;
+		&.blur{
+			opacity: 0;
+		}
+	}
+	&__tabs,&__title{
+		transition: 0.5s ease;
+		&.hide{
+			transform: translateX(50px);
+			opacity: 0;
+		}
+	}
+	&__steps{
+		transition: 0.3s ease;
+		transition-property: opacity;
+		&.blur{
+			opacity: 0.2;
+			pointer-events: none;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+.card-package{
+    transition:  0.3s ease;
+    transition-property: outline-color;
+    cursor: pointer;
+    &:hover{
+        outline-color: $gray12;
+    }
+    &.active{
+        outline-color: $red;
+        outline-width: 2px;
+        outline-offset: -1px;
+    }
+}

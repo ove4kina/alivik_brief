@@ -1,0 +1,150 @@
+.step{
+    &__title{
+        font-size: toRem(20);
+        line-height: toRem(32);
+        font-family: bold;
+        color: $black;
+        margin-bottom: toRem(12);
+    }
+    &__option{
+        & + &{
+            margin-top: toRem(32);
+        }
+    }
+    &__text{
+        & + .step{
+            &__line{
+                margin-top: toRem(16);
+                &--small-offset{
+                    margin-top: toRem(12);
+                }
+            }
+        }
+        p{
+            max-width: toRem(364);
+            &.bold{
+                max-width: none;
+            }
+        }
+    }
+    &__line{
+        & + &{
+            margin-top: toRem(12);
+        }
+        & + .step__line--big-offset{
+            margin-top: toRem(20);
+        }
+    }
+    &__list{
+        &--nowrap{
+            white-space: nowrap;
+        }
+        &--radio{
+            margin-right: toRem(-24);
+        }
+    }
+    &__select{
+        & + &{
+            margin-top: toRem(12);
+        }
+    }
+    &__card{
+        display: inline-block;
+        vertical-align: top;
+        white-space: normal;
+        &--package{
+            & + &{
+                margin-left: toRem(30);
+            }
+        }
+        &--product{
+            & + &{
+                margin-left: toRem(12);
+            }
+        }
+        &--visual{
+            & + &{
+                margin-left: toRem(16);
+            }
+        }
+    }
+    &__radio{
+        display: inline-block;
+        vertical-align: top;
+        margin-right: toRem(12);
+        margin-bottom: toRem(12);
+    }
+    &__button{
+        &--option{
+            width: toRem(240);
+            margin-top: toRem(20);
+        }
+        &--add{
+            width: 100%;
+            margin-top: toRem(40);
+            @media (min-width: $desktop){
+                display: none;
+            }
+        }
+    }
+    &__input{
+        max-width: toRem(400);
+    }
+    &__textarea{
+        max-width: toRem(460);
+    }
+    &__checkbox-small{
+        & + &{
+            margin-top: toRem(16);
+        }
+        &--inline{
+            display: inline-block;
+            vertical-align: top;
+            width: toRem(274);
+            margin-bottom: toRem(16);
+            & + &{
+                margin-top: 0;
+            }
+            &:nth-last-child(-n+2){
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__options{
+        & + .step{
+            &__title{
+                border-top: 1px solid $gray1;
+                margin-top: toRem(32);
+                padding-top: toRem(40);
+            }
+        }
+    }
+    &__form{
+        position: absolute;
+        width: 100%;
+    }
+}
+
+.text{
+    span{
+        color: rgba($black,0.6);
+        font-size: toRem(12);
+        line-height: normal;
+        display: inline-block;
+        width: toRem(5);
+        transform: translate(-0.08333rem,-0.41667rem);
+    }
+    p{
+        font-size: toRem(12);
+        line-height: toRem(20);
+        color: rgba($black,0.5);
+        &.bold{
+            font-size: toRem(16);
+            line-height: toRem(24);
+            color: $black;
+            & + p{
+                margin-top: toRem(4);
+            }
+        }
+    }
+}

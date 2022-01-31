@@ -1,0 +1,27 @@
+.checkbox-small{
+	&__value{
+		width: toRem(40);
+		height: toRem(40);
+		display: inline-block;
+		vertical-align: middle;
+		border: 1px solid $gray3;
+		box-sizing: border-box;
+	}
+	&__name{
+		display: inline-block;
+		vertical-align: middle;
+		font-size: toRem(14);
+		line-height: toRem(20);
+		color: rgba($black,0.7);
+		margin-left: toRem(12);
+	}
+	&__price{
+		display: inline-block;
+		vertical-align: middle;
+		font-size: toRem(14);
+		line-height: toRem(24);
+		color: rgba($black,0.5);
+		font-family: bold;
+		margin-left: toRem(6);
+	}
+}

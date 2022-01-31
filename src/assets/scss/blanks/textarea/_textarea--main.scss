@@ -1,0 +1,10 @@
+.textarea{
+    textarea{
+        transition: border-color .3s ease;
+    }
+    &:hover{
+        textarea{
+            border-color: $gray12;
+        }
+    }
+}

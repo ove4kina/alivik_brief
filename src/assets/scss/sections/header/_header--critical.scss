@@ -1,0 +1,24 @@
+.header{
+    padding: toRem(16) 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 11;
+    &__logo{
+        display: block;
+        font-size: 0;
+        img{
+            width: toRem(164);
+        }
+    }
+    @media (min-width: $desktop) {
+        padding: toRem(16) 0;
+        &__logo{
+            img{
+                width: toRem(164);
+            }
+        }
+    }
+}

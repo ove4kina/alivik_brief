@@ -1,0 +1,25 @@
+.radio{
+	transition: 0.3s ease;
+	transition-property: outline-color,color;
+	span{
+		transition:color 0.3s ease;
+	}
+	&.active{
+		color: $black;
+		outline-color: $red!important;
+		outline-width: 2px;
+		outline-offset: -1px;
+		span{
+			color: $black;
+		}
+	}
+	@media (min-width: $desktop){
+		&:hover{
+			color: $black;
+			outline-color: $gray8;
+			span{
+				color: $black;
+			}
+		}
+	}
+}

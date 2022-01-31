@@ -1,0 +1,63 @@
+.select{
+    &__value{
+        cursor: pointer;
+    }
+    &__item{
+        cursor: pointer;
+    }
+    &__wrapper{
+        transition: border-color .3s ease;
+        &::before{
+            transition: .3s ease;
+            transition-property: color,transform;
+        }
+        &:hover{
+            border-color: $gray12;
+            z-index: 2;
+            &::before{
+                color: rgba(0,0,0,0.7);
+            }
+        }
+    }
+    &__color{
+        transition: border-color .3s ease;
+        &:hover{
+            border-color: $gray12;
+            z-index: 2;
+        }
+    }
+    &.active-color-picker{
+        .select{
+            &__color-picker{
+                transition: .3s ease;
+                transition-property: opacity,transform;
+            }
+        }
+    }
+    &.active{
+        .select{
+            &__list{
+                transition: .3s ease;
+                transition-property: opacity,transform;
+            }
+        }
+    }
+    @media (min-width: $desktop) {
+        &__item{
+            transition: opacity 0.3s ease;
+            &:hover{
+                opacity: 0.9;
+            }
+        }
+        &__delete{
+            &::before{
+                transition: color 0.3s ease;
+            }
+            &:hover{
+                &::before{
+                    color: rgba($black,0.7)
+                }
+            }
+        }
+    }
+}
